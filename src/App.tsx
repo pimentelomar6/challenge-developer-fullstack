@@ -3,12 +3,12 @@ import { CategoryList } from "./components/CategoryList";
 import { ServiceDetails } from "./components/ServiceDetails";
 import { Confirmation } from "./components/Confirmation";
 import { NavBar } from "./components/NavBar";
-import { Booking, Information, Service, ServiceId } from "./types";
+import { Booking, Information, Service, } from "./types";
 import { JSX } from "react/jsx-runtime";
 
 const App = (): JSX.Element => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [serviceId, setServiceId] = useState<ServiceId | null>(null);
+  const [serviceId, setServiceId] = useState<number | null>(null);
   const [confirmData, setConfirmData] = useState<Information | null>(null);
 
   const [viewMode, setViewMode] = useState("categoryList");
@@ -18,11 +18,15 @@ const App = (): JSX.Element => {
   };
 
   const handleConfirmationOpen = (booking: Booking) => {
+    if(selectedService){
+    
     const inf = {
       booking,
       selectedService,
     };
     setConfirmData(inf);
+
+  }
   };
 
   const handleSelectedService = (service: Service) => {
@@ -48,7 +52,7 @@ const App = (): JSX.Element => {
       )}
 
       {viewMode === "confirmation" && (
-        <Confirmation handleConfirmationClose={toggleView} data={confirmData} />
+        <Confirmation handleConfirmationClose={toggleView} data={confirmData!} />
       )}
 
       <NavBar />

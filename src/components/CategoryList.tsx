@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Header } from "./Header";
-import { Service, ServiceCategory } from "../types";
+import { Service } from "../types";
 import { servicesData } from "../data";
 import { getCategoryNames } from "../utils";
 
@@ -17,11 +17,11 @@ export const CategoryList: React.FC<Props> = ({
 
   const [services] = useState(servicesData);
   const [categories] = useState(uniqueCategories);
-  const [expandedCategory, setExpandedCategory] = useState<ServiceCategory | null>(null);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [isServiceSelectedCat, setIsServiceSelectedCat] = useState(false);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
-  const handleCategoryClick = (name: ServiceCategory) => {
+  const handleCategoryClick = (name: string) => {
     setExpandedCategory(expandedCategory === name ? null : name);
   };
 

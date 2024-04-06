@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import { Information } from "../types";
 
 interface Props {
-  data: Information | null;
+  data: Information  ;
   handleConfirmationClose: (newViewMode: string) => void;
 }
 
@@ -11,21 +11,24 @@ export const Confirmation: React.FC<Props> = ({
   data,
   handleConfirmationClose,
 }) => {
-  const { selectedService = {}, booking = {} } = data || {};
+  
+  const { selectedService , booking } = data;
+  
   const [confirmationState, setConfirmationState] = useState({
     confirmed: false,
     bookingData: {
-      service: selectedService.name,
-      date: booking.date,
-      hour: booking.hour,
+      service: selectedService?.name,
+      date: booking?.date,
+      hour: booking?.hour,
     },
   });
+
 
   const handleClick = () => {
     setConfirmationState({ ...confirmationState, confirmed: true });
   };
 
-  const formatDate = (date: string) => {
+  const formatDate = (date: string ) => {
     const newDate = new Date(date);
     return newDate.toLocaleDateString("es-ES");
   };

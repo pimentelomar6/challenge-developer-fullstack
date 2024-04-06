@@ -28,3 +28,4 @@ export type ServiceDescription = Pick<Service, 'description'>
 export type ServiceCategory = Pick<Service, 'category'>
 
 export type ListOfServices = Service[]
+

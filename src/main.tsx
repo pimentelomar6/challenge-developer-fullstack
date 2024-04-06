@@ -7,7 +7,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const rootElement = document.getElementById("root");
-ReactDOM.createRoot(rootElement).render(
+ReactDOM.createRoot(rootElement!).render(
   <React.StrictMode>
     <ChakraProvider>
       <App />

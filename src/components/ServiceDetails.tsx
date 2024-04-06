@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Header } from "./Header";
-import { Booking, ServiceId, Slot } from "../types";
+import { Booking,   Slot } from "../types";
 import { serviceDetails } from "../data";
 import { getDate } from "../utils";
 import { v4 } from "uuid";
 
 interface Props {
-  id: ServiceId;
-  handleCategoryOpen: (newViewMode: string) => void;
-  handleConfirmationOpen: (booking: Booking) => void;
+  id: number | null ,
+  handleCategoryOpen: (newViewMode: string) => void,
+  handleConfirmationOpen: (booking: Booking) => void
 }
 
 export const ServiceDetails: React.FC<Props> = ({
@@ -21,9 +21,12 @@ export const ServiceDetails: React.FC<Props> = ({
   const [timeSelected, setTimeSelected] = useState<string | null>(null);
 
   const handleClick = (data: Booking) => {
+
     handleConfirmationOpen(data);
     handleCategoryOpen("confirmation");
+    
   };
+
 
   const handleTimeSelect = (service: Slot, aviliable: string) => {
     const booking = {
@@ -83,7 +86,7 @@ export const ServiceDetails: React.FC<Props> = ({
           {isSelected && (
             <button
               className="button button-select"
-              onClick={() => handleClick(reserva)}
+              onClick={() => handleClick(reserva!)}
             >
               Siguiente
             </button>
