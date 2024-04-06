@@ -1,0 +1,158 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  height: 100vh;
+}
+.category-container {
+  margin-top: 20px;
+  padding: 20px 10px 20px 10px;
+  border: 1px solid #d4dde2;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.category-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f5f7;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.service-card {
+  padding: 10px;
+  border: 1px solid #d4dde2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.service-container-btn {
+  display: flex;
+  justify-content: end;
+}
+
+.button {
+  border: none;
+  color: white;
+  background-color: #798897;
+  padding: 8px 10px 8px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.button-select {
+  background-color: #4a5c6a;
+}
+
+.button.hour {
+  background-color: #c2ced9;
+  color: black;
+  font-weight: normal;
+  min-width: 120px;
+}
+
+.footer-container {
+  border-top: 1px solid gainsboro;
+  margin: 10px 5px 10px 5px;
+  padding: 10px 0px 10px 0px;
+  display: flex;
+}
+
+.footer-container.one {
+  justify-content: end;
+}
+
+.footer-container.two {
+  justify-content: space-between;
+}
+
+.time-container {
+  justify-content: space-around;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.paragrah {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.material-symbols-outlined {
+  color: #798897;
+  font-weight: 800;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4a5c6a;
+  cursor: pointer;
+}
+
+.icon:hover {
+  border-bottom: 3px solid #6458f4;
+}
+
+.icon:hover span,
+.icon:hover .text {
+  color: #6458f4;
+}
+.icon span,
+.icon .text {
+  color: #4a5c6a;
+}
+
+.navigator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+  border-top: 1px solid #d4dde2;
+  padding: 10px;
+
+  flex-basis: 10%;
+}
+
+.header {
+  flex-basis: 10%;
+}
+
+.contain-flex {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button.hour.select {
+  color: white;
+  background-color: #4a5c6a;
+}
