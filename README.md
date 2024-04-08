@@ -45,9 +45,14 @@ Iniciar Servidor
 [Link Demo](https://challenge-dev-omar.netlify.app/)
 
 
+## Testing
+
+- Vitest
+- jsdom
+- React Testing Library
 
 
 ## Notas
 
-Este proyecto utiliza librerías como Chakra UI, UUID, Bootstrap.
+Este proyecto utiliza librerías como Chakra UI, UUID, Bootstrap
 
